@@ -12,23 +12,7 @@ int main()
     std::cout << "----------\n" << std::endl;
     
     ask_for_user_input();
-
-    if (op == '+')
-    {
-        result = first + second;
-    }
-    else if (op == '-')
-    {
-        result = first - second;
-    }
-    else if (op == '*')
-    {
-        result = first * second;
-    }
-    else if (op == '/')
-    {
-        result = first / second;
-    }
+    result = calculate(first, second, op);   
 
     std::cout << first << " " << op << " " << second <<  " = " << result << std::endl;
 
@@ -45,4 +29,23 @@ void ask_for_user_input()
     std::cout << "Enter the second integer: ";
     std::cin >> second;
 }
-int calculate(int first, int second, char op);
+int calculate(int first, int second, char op)
+{
+    if (op == '+')
+    {
+        result = first + second;
+    }
+    else if (op == '-')
+    {
+        result = first - second;
+    }
+    else if (op == '*')
+    {
+        result = first * second;
+    }
+    else if (op == '/')
+    {
+        result = first / second;
+    }
+    return result;
+}
