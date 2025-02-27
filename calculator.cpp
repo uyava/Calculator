@@ -46,3 +46,17 @@ int check_user_operator(char op)
     if(op != '+' && op != '-' && op != '*' && op != '/') good = 0;
     return good;
 }
+
+int check_and_cast_operator(std::string inpt)
+{
+    if(inpt.length()!=1)
+    {
+        return 0;
+    }
+    if(op != '+' && op != '-' && op != '*' && op != '/')
+    {
+        return 0;
+    }
+    op = inpt[0];
+    return 1;
+}
