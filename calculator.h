@@ -9,6 +9,7 @@ extern char op;
 extern std::string inpt;
 
 void print_greeting();
+void print_warning();
 void ask_for_user_input();
 int check_user_operator(char op);
 int calculate(int first, int second, char op);
