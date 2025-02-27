@@ -82,3 +82,18 @@ int check_and_cast_integer(std::string inpt, int integer)
     integer = std::stoi(inpt);
     return 1;
 }
+
+void ask_for_user_input_with_checks()
+{
+    std::cout << "Enter the first integer: ";
+    std::cin >> inpt;
+    if(check_and_cast_integer(inpt, first)!=1) return;
+    
+    std::cout << "Enter the operator (+,-,*,/): ";
+    std::cin >> inpt;
+    if(check_and_cast_operator(inpt)!=1)return;
+    
+    std::cout << "Enter the second integer: ";
+    std::cin >> inpt;
+    if(check_and_cast_integer(inpt, second)!=1)return;
+}
