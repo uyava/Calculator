@@ -3,9 +3,7 @@
 
 int main()
 {
-    std::cout << "Calculator" << std::endl;
-    std::cout << "----------\n" << std::endl;
-    
+    print_greeting();    
     ask_for_user_input();
     int good = check_user_operator(op);
     if (good == 1)

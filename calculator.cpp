@@ -3,6 +3,12 @@
 int first = 0, second = 0, result = 0;
 char op = 'y';
 
+void print_greeting()
+{
+    std::cout << "Calculator" << std::endl;
+    std::cout << "----------\n" << std::endl;
+}
+
 void ask_for_user_input()
 {
     std::cout << "Enter the first integer: ";
