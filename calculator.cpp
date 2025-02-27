@@ -2,6 +2,7 @@
 
 int first = 0, second = 0, result = 0;
 char op = 'y';
+std::string inpt = "";
 
 void print_greeting()
 {
@@ -58,5 +59,26 @@ int check_and_cast_operator(std::string inpt)
         return 0;
     }
     op = inpt[0];
+    return 1;
+}
+
+int check_and_cast_integer(std::string inpt, int integer)
+{
+    char length = inpt.length();
+    if(inpt[0]=='-')
+    {
+        for(int i = 1; i<length; i++)
+        {
+            if(!isdigit(inpt[i]))return 0;
+        }
+    }
+    else
+    {
+        for(int i = 0; i<length; i++)
+        {
+            if(!isdigit(inpt[i]))return 0;
+        }
+    }
+    integer = std::stoi(inpt);
     return 1;
 }
