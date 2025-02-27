@@ -15,16 +15,6 @@ void print_warning()
     std::cout << "The input is invalid. I cannot proceed further." << std::endl;
 }
 
-void ask_for_user_input()
-{
-    std::cout << "Enter the first integer: ";
-    std::cin >> first;
-    std::cout << "Enter the operator (+,-,*,/): ";
-    std::cin >> op;
-    std::cout << "Enter the second integer: ";
-    std::cin >> second;
-}
-
 int calculate(int first, int second, char op)
 {
     if (op == '+')
@@ -44,13 +34,6 @@ int calculate(int first, int second, char op)
         result = first / second;
     }
     return result;
-}
-
-int check_user_operator(char op)
-{
-    int good = 1;
-    if(op != '+' && op != '-' && op != '*' && op != '/') good = 0;
-    return good;
 }
 
 int check_and_cast_operator(std::string inpt)
